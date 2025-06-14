@@ -7,6 +7,9 @@ set(CMAKE_C_STANDARD 11)
 set(GLFW_DIR ${CMAKE_CURRENT_SOURCE_DIR}/glfw)
 set(GLAD_DIR ${CMAKE_CURRENT_SOURCE_DIR}/glad)
 
+set(SHADER_DIR "${CMAKE_SOURCE_DIR}/shaders")
+add_compile_definitions(SHADER_DIR="${SHADER_DIR}")
+
 file(GLOB src-files
         ${CMAKE_SOURCE_DIR}/*.cpp
         ${GLAD_DIR}/src/*.c)
