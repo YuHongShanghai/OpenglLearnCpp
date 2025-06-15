@@ -10,6 +10,9 @@ set(GLAD_DIR ${CMAKE_CURRENT_SOURCE_DIR}/glad)
 set(SHADER_DIR "${CMAKE_SOURCE_DIR}/shaders")
 add_compile_definitions(SHADER_DIR="${SHADER_DIR}")
 
+set(RES_DIR "${CMAKE_SOURCE_DIR}/res")
+add_compile_definitions(RES_DIR="${RES_DIR}")
+
 file(GLOB src-files
         ${CMAKE_SOURCE_DIR}/*.cpp
         ${GLAD_DIR}/src/*.c)
@@ -18,6 +21,7 @@ add_executable(${PROJECT_NAME} ${src-files})
 
 target_include_directories(${PROJECT_NAME}
         PRIVATE
+        ${CMAKE_SOURCE_DIR}
         ${GLFW_DIR}/include
         ${GLAD_DIR}/include
 )
