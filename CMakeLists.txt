@@ -6,6 +6,7 @@ set(CMAKE_C_STANDARD 11)
 
 set(GLFW_DIR ${CMAKE_CURRENT_SOURCE_DIR}/glfw)
 set(GLAD_DIR ${CMAKE_CURRENT_SOURCE_DIR}/glad)
+set(GLM_DIR ${CMAKE_CURRENT_SOURCE_DIR}/glm)
 
 set(SHADER_DIR "${CMAKE_SOURCE_DIR}/shaders")
 add_compile_definitions(SHADER_DIR="${SHADER_DIR}")
@@ -24,6 +25,7 @@ target_include_directories(${PROJECT_NAME}
         ${CMAKE_SOURCE_DIR}
         ${GLFW_DIR}/include
         ${GLAD_DIR}/include
+        ${GLM_DIR}
 )
 
 target_link_libraries(${PROJECT_NAME}
